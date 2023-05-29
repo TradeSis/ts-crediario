@@ -13,7 +13,7 @@ function buscaContratos($numeroContrato)
 		));
 	
 
-	$retorno = chamaAPI('http://10.2.0.233/bsweb/apitsweb', '/crediario/crediario/contrato', json_encode($apiEntrada), 'GET');
+	$retorno = chamaAPI(null, '/crediario/contrato', json_encode($apiEntrada), 'GET');
 
    
 	if (isset($retorno["conteudoSaida"])) {
