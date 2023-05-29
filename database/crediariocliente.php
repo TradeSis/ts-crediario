@@ -15,7 +15,7 @@ function buscaHistoricoCliente($codigoCliente,$cpfCNPJ,$situacao)
 		));
 	
 
-	$retorno = chamaAPI(null, '/ts/crediario/cliente', json_encode($apiEntrada), 'GET');
+	$retorno = chamaAPI(null, '/crediario/crediario/cliente', json_encode($apiEntrada), 'GET');
 
    
 	if (isset($retorno["conteudoSaida"])) {

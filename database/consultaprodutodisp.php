@@ -12,7 +12,7 @@ function buscaProduDisp($procod)
 		'procod' => $procod
 	);
 
-	$produtos = chamaAPI(null, '/ts/consultaprodutodisp', json_encode($apiEntrada), 'GET');
+	$produtos = chamaAPI(null, '/vendas/consultaprodutodisp', json_encode($apiEntrada), 'GET');
 	
 
 	if (isset($produtos["produtos"])) {

@@ -14,7 +14,7 @@ function buscaBonusCliente($codigoCliente)
 		));
 	
 
-	$retorno = chamaAPI(null, '/ts/consultabonuscliente', json_encode($apiEntrada), 'GET');
+	$retorno = chamaAPI(null, '/vendas/consultabonuscliente', json_encode($apiEntrada), 'GET');
 
    
 	if (isset($retorno["conteudoSaida"])) {
