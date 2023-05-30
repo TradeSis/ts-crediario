@@ -16,7 +16,7 @@ if (isset($_GET['codigoCliente'])) {
 if (empty($cpfCNPJ)) {
     $cpfCNPJ = null;
 } // Se estiver vazio, coloca null
-$situacao = 'LIB';
+$situacao = '';
 
 $historico = buscaHistoricoCliente($codigoCliente, $cpfCNPJ, $situacao);
 $cliente = $historico["cliente"][0];
