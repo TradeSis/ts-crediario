@@ -15,7 +15,7 @@ if (isset($_GET['codigoCliente'])) {
 
 if (empty($cpfCNPJ)) {
     $cpfCNPJ = null;
-} // Se estiver vazio, coloca null
+} 
 $situacao = '';
 
 $historico = buscaHistoricoCliente($codigoCliente, $cpfCNPJ, $situacao);
@@ -57,10 +57,10 @@ $contratos = $historico["contratos"];
                 <hr>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Abertos</a>
+                        <a class="nav-link active" style="color:blue" href="#">Abertos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="historico_clientepag.php?codigoCliente=<?php echo $codigoCliente ?>">Pagos</a>
+                        <a class="nav-link active" href="historico_clientepag.php?codigoCliente=<?php echo $codigoCliente ?>">Pagos</a>
                     </li>
                 </ul>
                 <h5>Contratos</h5>
