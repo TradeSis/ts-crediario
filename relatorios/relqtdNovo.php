@@ -88,7 +88,7 @@ $relatorios = buscaRelatorios($progcod);
                             </div>
                         </div>
                     </div>
-                    <?php } ?>
+                    <?php }} ?>
                 </table>
             </div>
         </div>
