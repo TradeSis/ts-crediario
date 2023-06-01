@@ -48,6 +48,7 @@ $relatorios = buscaRelatorios($progcod);
                     </tr>
                 </thead>
                 <?php
+                if (!empty($relatorios)) {
                 foreach ($relatorios as $relatorio) {
                 ?>
                     <tr>
