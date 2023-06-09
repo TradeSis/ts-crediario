@@ -47,6 +47,7 @@ $relatorios = buscaRelatorios(null,null);
                     </tr>
                 </thead>
                 <?php
+                if (!empty($relatorios)) {
                 foreach ($relatorios as $relatorio) {
                 ?>
                     <tr>
@@ -61,7 +62,7 @@ $relatorios = buscaRelatorios(null,null);
                             <a class="btn btn-sm" href="visualizar.php?nomeArquivo=<?php echo $relatorio['nomeArquivo'] ?>">Visualizar</a>
                         </td>
                     </tr>
-                <?php } ?>
+                <?php }} ?>
             </table>
         </div>
     </div>

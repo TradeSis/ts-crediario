@@ -63,6 +63,7 @@ $relatorios = buscaRelatorios($progcod,$parametros);
                     </tr>
                 </thead>
                 <?php
+                if (!empty($relatorios)) {
                 foreach ($relatorios as $relatorio) {
                 ?>
                     <tr>
@@ -109,7 +110,7 @@ $relatorios = buscaRelatorios($progcod,$parametros);
                         <input type="text" class="form-control" value="<?php echo $relatparam['dataFinal'] ?>" readonly>
                     </div>
                 </div>
-                <?php } ?>
+                <?php }} ?>
             </div>
         </div>
     </div>

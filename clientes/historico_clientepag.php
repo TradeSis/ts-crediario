@@ -51,10 +51,10 @@ $contratos = $historico["contratos"];
                 <hr>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link" href="historico_cliente.php?codigoCliente=<?php echo $cliente['codigoCliente'] ?>">Abertos</a>
+                        <a class="nav-link active" href="historico_cliente.php?codigoCliente=<?php echo $cliente['codigoCliente'] ?>">Abertos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Pagos</a>
+                        <a class="nav-link active" style="color:blue" href="#">Pagos</a>
                     </li>
                 </ul>
                 <h5>Contratos</h5>

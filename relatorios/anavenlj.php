@@ -7,11 +7,7 @@ include_once '../database/relatorios.php';
 $progcod="anavenlj";
 $relatorios = buscaRelatorios($progcod);
 ?>
-<script>
- setTimeout(() => {
-  document.location.reload();
-}, 3000); 
-</script>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -52,6 +48,7 @@ $relatorios = buscaRelatorios($progcod);
                     </tr>
                 </thead>
                 <?php
+                if (!empty($relatorios)) {
                 foreach ($relatorios as $relatorio) {
                 ?>
                     <tr>
@@ -93,7 +90,7 @@ $relatorios = buscaRelatorios($progcod);
                             </div>
                         </div>
                     </div>
-                    <?php } ?>
+                    <?php }} ?>
                 </table>
             </div>
         </div>

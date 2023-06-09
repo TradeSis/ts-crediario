@@ -28,7 +28,11 @@ $produtos = $contrato["produtos"];
                         </h3>
                     </div>
                     <div class="col-sm" style="text-align:right">
-                        <a href="#" onclick="history.back()" role="button" class="btn btn-primary btn-sm">Voltar</a>
+                        <?php if (isset($_GET['numeroContrato'])) { ?>
+                            <a href="historico_cliente.php?codigoCliente=<?php echo $contrato['codigoCliente'] ?>" role="button" class="btn btn-primary btn-sm">Voltar</a>
+                        <?php } else { ?>
+                            <a href="#" onclick="history.back()" role="button" class="btn btn-primary btn-sm">Voltar</a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -85,12 +89,12 @@ $produtos = $contrato["produtos"];
                                     <?php foreach ($parcelas as $parcela) { ?>
                                         <tr>
                                             <td class="text-center"><?php echo $parcela['numeroContrato'] ?></td>
-                                            <td class="text-center"><?php echo number_format($produto['parcela'], 2, ',', '.') ?></td>
+                                            <td class="text-center"><?php echo number_format($parcela['parcela'], 2, ',', '.') ?></td>
                                             <td class="text-center"><?php echo date('d/m/Y', strtotime($parcela['dtVencimento'])) ?></td>
-                                            <td class="text-center"><?php echo number_format($produto['vlrParcela'], 2, ',', '.') ?></td>
+                                            <td class="text-center"><?php echo number_format($parcela['vlrParcela'], 2, ',', '.') ?></td>
                                             <td class="text-center"><?php echo $parcela['situacao'] ?></td>
                                             <td class="text-center"><?php echo date('d/m/Y', strtotime($parcela['dtPagamento'])) ?></td>
-                                            <td class="text-center"><?php echo number_format($produto['vlrPago'], 2, ',', '.') ?></td>
+                                            <td class="text-center"><?php echo number_format($parcela['vlrPago'], 2, ',', '.') ?></td>
                                         </tr>
                                     <?php } ?>
 
